@@ -1,12 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=project.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecting…</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Classroom Attention System</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <p>Redirecting to the demo — if you are not redirected automatically, <a href="project.html">click here</a>.</p>
+
+  <div class="bg"></div>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1>AI Classroom Attention System</h1>
+      <p>
+        Real-time distraction detection using AI vision models to
+        promote smarter and more engaging learning environments.
+      </p>
+    </header>
+
+    <!-- PROJECT OVERVIEW -->
+    <section class="info-card">
+      <h2>📚 Project Overview</h2>
+
+      <p>
+        The AI Classroom Attention System is an educational technology
+        prototype designed to monitor student attention levels using
+        computer vision and machine learning.
+      </p>
+
+      <p>
+        By analysing live webcam input through a Teachable Machine
+        model, the system classifies attention into three categories:
+        <b>No Distraction</b>, <b>Medium Distraction</b>, and
+        <b>High Distraction</b>.
+      </p>
+
+      <p>
+        This project demonstrates how artificial intelligence can be
+        integrated into classrooms to support data-driven educational
+        insights and improve student engagement.
+      </p>
+    </section>
+
+    <!-- OBJECTIVES -->
+    <section class="info-card">
+      <h2>🎯 Project Objectives</h2>
+
+      <ul class="objective-list">
+        <li>Develop a real-time attention monitoring prototype.</li>
+        <li>Apply computer vision techniques in educational settings.</li>
+        <li>Demonstrate practical use of AI for classroom analytics.</li>
+        <li>Provide instant visual feedback through a simple dashboard.</li>
+        <li>Encourage further research into smart learning systems.</li>
+      </ul>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="info-card">
+      <h2>⚙️ How It Works</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">1</div>
+
+          <h3>Capture</h3>
+
+          <p>
+            The webcam captures live visual information from the
+            user.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+
+          <h3>Analyse</h3>
+
+          <p>
+            The trained Teachable Machine model processes the
+            incoming images.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+
+          <h3>Classify</h3>
+
+          <p>
+            AI predicts the distraction level based on learned
+            patterns.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+
+          <h3>Display</h3>
+
+          <p>
+            Results are presented instantly through an interactive
+            dashboard.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+
+      <button onclick="init()">
+        Start Camera
+      </button>
+
+      <button onclick="testModelURL()">
+        Test Model
+      </button>
+
+      <button onclick="resetDemo()">
+        Reset
+      </button>
+
+    </div>
+
+    <!-- STATUS -->
+    <div id="status">
+      Click Start Camera to begin
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <!-- CAMERA -->
+      <div class="camera">
+
+        <div id="webcam-container"></div>
+
+      </div>
+
+      <!-- PANEL -->
+      <div class="panel">
+
+        <h2>Live Distraction Level</h2>
+
+        <div id="lowBox" class="label-box low">
+          No Distraction 🟢
+          <span id="lowVal">0%</span>
+        </div>
+
+        <div id="mediumBox" class="label-box medium">
+          Medium Distraction 🟠
+          <span id="mediumVal">0%</span>
+        </div>
+
+        <div id="highBox" class="label-box high">
+          High Distraction 🔴
+          <span id="highVal">0%</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- AI INSIGHTS -->
+    <section class="info-card">
+
+      <h2>🧠 AI Insights</h2>
+
+      <p id="aiInsight">
+        Start the camera to receive real-time attention insights.
+      </p>
+
+    </section>
+
+    <!-- TECHNOLOGY STACK -->
+    <section class="info-card">
+
+      <h2>💻 Technologies Used</h2>
+
+      <div class="tech-stack">
+
+        <span>TensorFlow.js</span>
+
+        <span>Teachable Machine</span>
+
+        <span>HTML5</span>
+
+        <span>CSS3</span>
+
+        <span>JavaScript</span>
+
+        <span>Computer Vision</span>
+
+        <span>Machine Learning</span>
+
+      </div>
+
+    </section>
+
+    <!-- FUTURE SCOPE -->
+    <section class="info-card">
+
+      <h2>🚀 Future Scope</h2>
+
+      <ul class="objective-list">
+
+        <li>
+          Multi-student classroom monitoring.
+        </li>
+
+        <li>
+          Real-time teacher dashboards with analytics.
+        </li>
+
+        <li>
+          Automated reports showing engagement trends.
+        </li>
+
+        <li>
+          Integration with online learning platforms.
+        </li>
+
+        <li>
+          Enhanced models trained on larger datasets.
+        </li>
+
+      </ul>
+
+    </section>
+
+    <!-- ABOUT CREATOR -->
+    <section class="info-card">
+
+      <h2>👩‍💻 About the Creator</h2>
+
+      <p>
+        <b>Aiswarya K P</b> is a B.Tech Computer Science and
+        Engineering student at TIST, passionate about Artificial
+        Intelligence, innovative technologies, and building solutions
+        that create real-world impact.
+      </p>
+
+      <p>
+        This project was developed as a demonstration of how AI can
+        contribute to smarter educational environments through
+        practical computer vision applications.
+      </p>
+
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="info-card disclaimer">
+
+      <h2>ℹ Educational Disclaimer</h2>
+
+      <p>
+        This project is developed solely for educational and
+        demonstration purposes. The predictions generated by the model
+        depend on the quality and diversity of the training data and
+        should not be interpreted as definitive assessments of a
+        student's learning ability, intelligence, or academic
+        performance.
+      </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+      Created by
+      <b>Aiswarya K P</b>
+
+      •
+
+      AI Classroom Attention System
+
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
