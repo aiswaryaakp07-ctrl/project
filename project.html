@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Classroom Attention System</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+  <header>
+    <h1>AI Classroom Attention System</h1>
+    <p>Real-time distraction detection using AI model</p>
+  </header>
+
+  <div class="buttons">
+    <button onclick="init()">Start Camera</button>
+    <button onclick="testModelURL()">Test Model</button>
+    <button onclick="resetDemo()">Reset</button>
+  </div>
+
+  <div id="status">Click Start Camera</div>
+
+  <div class="grid">
+
+    <div class="camera">
+      <div id="webcam-container"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Live Distraction Level</h2>
+      <div id="label-container"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    Created by <b>Aiswarya K P</b>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
