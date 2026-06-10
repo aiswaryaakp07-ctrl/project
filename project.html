@@ -16,7 +16,7 @@
 
   <header>
     <h1>AI Classroom Attention System</h1>
-    <p>Real-time distraction detection using AI model</p>
+    <p>Real-time distraction detection using AI vision model</p>
   </header>
 
   <div class="buttons">
@@ -25,7 +25,7 @@
     <button onclick="resetDemo()">Reset</button>
   </div>
 
-  <div id="status">Click Start Camera</div>
+  <div id="status">Click Start Camera to begin</div>
 
   <div class="grid">
 
@@ -35,13 +35,26 @@
 
     <div class="panel">
       <h2>Live Distraction Level</h2>
-      <div id="label-container"></div>
+
+      <!-- FIXED BOXES (always present) -->
+      <div id="lowBox" class="label-box low">
+        No Distraction 🟢 <span id="lowVal">0%</span>
+      </div>
+
+      <div id="mediumBox" class="label-box medium">
+        Medium Distraction 🟠 <span id="mediumVal">0%</span>
+      </div>
+
+      <div id="highBox" class="label-box high">
+        High Distraction 🔴 <span id="highVal">0%</span>
+      </div>
+
     </div>
 
   </div>
 
   <footer>
-    Created by <b>Aiswarya K P</b>
+    Created by <b>Aiswarya K P</b> • AI Project Demo
   </footer>
 
 </div>
