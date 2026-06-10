@@ -18,103 +18,27 @@
         <!-- HEADER -->
         <header>
             <h1>AI Classroom Attention System</h1>
+
             <p>
-                Real-time distraction detection using AI vision models to
-                promote smarter and more engaging learning environments.
+                Real-time distraction detection using AI vision models.
             </p>
         </header>
 
         <!-- PROJECT OVERVIEW -->
         <section class="info-card">
+
             <h2>📚 Project Overview</h2>
 
             <p>
-                The AI Classroom Attention System is an educational technology
-                prototype designed to monitor student attention levels using
-                computer vision and machine learning.
+                This AI-powered system monitors attention levels through
+                live webcam input. Using a Teachable Machine model,
+                it classifies focus into No Distraction, Medium
+                Distraction, and High Distraction categories.
             </p>
 
-            <p>
-                By analysing live webcam input through a Teachable Machine
-                model, the system classifies attention into three categories:
-                <b>No Distraction</b>, <b>Medium Distraction</b>, and
-                <b>High Distraction</b>.
-            </p>
-
-            <p>
-                This project demonstrates how artificial intelligence can be
-                integrated into classrooms to support data-driven educational
-                insights and improve student engagement.
-            </p>
         </section>
 
-        <!-- OBJECTIVES -->
-        <section class="info-card">
-            <h2>🎯 Project Objectives</h2>
-
-            <ul class="objective-list">
-                <li>Develop a real-time attention monitoring prototype.</li>
-                <li>Apply computer vision techniques in educational settings.</li>
-                <li>Demonstrate practical use of AI for classroom analytics.</li>
-                <li>Provide instant visual feedback through a simple dashboard.</li>
-                <li>Encourage further research into smart learning systems.</li>
-            </ul>
-        </section>
-
-        <!-- HOW IT WORKS -->
-        <section class="info-card">
-            <h2>⚙️ How It Works</h2>
-
-            <div class="steps">
-
-                <div class="step">
-                    <div class="step-number">1</div>
-
-                    <h3>Capture</h3>
-
-                    <p>
-                        The webcam captures live visual information from the
-                        user.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-
-                    <h3>Analyse</h3>
-
-                    <p>
-                        The trained Teachable Machine model processes the
-                        incoming images.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-
-                    <h3>Classify</h3>
-
-                    <p>
-                        AI predicts the distraction level based on learned
-                        patterns.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-
-                    <h3>Display</h3>
-
-                    <p>
-                        Results are presented instantly through an interactive
-                        dashboard.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- BUTTONS -->
+        <!-- CONTROL BUTTONS -->
         <div class="buttons">
 
             <button onclick="init()">
@@ -136,7 +60,7 @@
             Click Start Camera to begin
         </div>
 
-        <!-- GRID -->
+        <!-- MAIN GRID -->
         <div class="grid">
 
             <!-- CAMERA -->
@@ -146,24 +70,33 @@
 
             </div>
 
-            <!-- PANEL -->
+            <!-- LIVE PANEL -->
             <div class="panel">
 
                 <h2>Live Distraction Level</h2>
 
                 <div id="lowBox" class="label-box low">
+
                     No Distraction 🟢
+
                     <span id="lowVal">0%</span>
+
                 </div>
 
                 <div id="mediumBox" class="label-box medium">
+
                     Medium Distraction 🟠
+
                     <span id="mediumVal">0%</span>
+
                 </div>
 
                 <div id="highBox" class="label-box high">
+
                     High Distraction 🔴
+
                     <span id="highVal">0%</span>
+
                 </div>
 
             </div>
@@ -178,6 +111,73 @@
             <p id="aiInsight">
                 Start the camera to receive real-time attention insights.
             </p>
+
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="info-card">
+
+            <h2>⚙️ How It Works</h2>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h3>Capture</h3>
+
+                    <p>
+                        Webcam captures live images.
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h3>Analyse</h3>
+
+                    <p>
+                        AI processes the visual data.
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <h3>Predict</h3>
+
+                    <p>
+                        The model identifies distraction levels.
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <h3>Display</h3>
+
+                    <p>
+                        Results appear instantly on the dashboard.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -200,75 +200,18 @@
 
                 <span>Computer Vision</span>
 
-                <span>Machine Learning</span>
-
             </div>
 
         </section>
 
-        <!-- FUTURE SCOPE -->
+        <!-- DEVELOPER -->
         <section class="info-card">
 
-            <h2>🚀 Future Scope</h2>
-
-            <ul class="objective-list">
-
-                <li>
-                    Multi-student classroom monitoring.
-                </li>
-
-                <li>
-                    Real-time teacher dashboards with analytics.
-                </li>
-
-                <li>
-                    Automated reports showing engagement trends.
-                </li>
-
-                <li>
-                    Integration with online learning platforms.
-                </li>
-
-                <li>
-                    Enhanced models trained on larger datasets.
-                </li>
-
-            </ul>
-
-        </section>
-
-        <!-- ABOUT CREATOR -->
-        <section class="info-card">
-
-            <h2>👩‍💻 About the Creator</h2>
+            <h2>👩‍💻 Developer</h2>
 
             <p>
-                <b>Aiswarya K P</b> is a B.Tech Computer Science and
-                Engineering student at TIST, passionate about Artificial
-                Intelligence, innovative technologies, and building solutions
-                that create real-world impact.
-            </p>
-
-            <p>
-                This project was developed as a demonstration of how AI can
-                contribute to smarter educational environments through
-                practical computer vision applications.
-            </p>
-
-        </section>
-
-        <!-- DISCLAIMER -->
-        <section class="info-card disclaimer">
-
-            <h2>ℹ Educational Disclaimer</h2>
-
-            <p>
-                This project is developed solely for educational and
-                demonstration purposes. The predictions generated by the model
-                depend on the quality and diversity of the training data and
-                should not be interpreted as definitive assessments of a
-                student's learning ability, intelligence, or academic
-                performance.
+                Developed by <b>Aiswarya K P</b>,
+                B.Tech Computer Science student at TIST.
             </p>
 
         </section>
@@ -281,7 +224,7 @@
 
             •
 
-            AI Classroom Attention System
+            AI Project Demonstration
 
         </footer>
 

@@ -1,6 +1,7 @@
 const URL = "https://teachablemachine.withgoogle.com/models/_CMBYSsne/";
 
-let model, webcam, isRunning = false;
+let model, webcam;
+let isRunning = false;
 
 async function init() {
 
@@ -18,22 +19,24 @@ async function init() {
             URL + "metadata.json"
         );
 
-        setStatus("Requesting camera access...");
+        setStatus("Starting camera...");
 
         webcam = new tmImage.Webcam(320, 320, true);
 
         await webcam.setup();
         await webcam.play();
 
-        document.getElementById("webcam-container").innerHTML = "";
+        document.getElementById(
+            "webcam-container"
+        ).innerHTML = "";
 
-        document
-            .getElementById("webcam-container")
-            .appendChild(webcam.canvas);
+        document.getElementById(
+            "webcam-container"
+        ).appendChild(webcam.canvas);
 
         isRunning = true;
 
-        setStatus("AI Classroom Attention System is active ✔");
+        setStatus("AI Classroom Attention System Active ✔");
 
         window.requestAnimationFrame(loop);
 
@@ -42,7 +45,7 @@ async function init() {
         console.error(error);
 
         setStatus(
-            "Unable to start the system. Please allow camera access."
+            "Unable to access the camera. Please allow permissions."
         );
     }
 }
@@ -60,7 +63,9 @@ async function loop() {
 
 async function predict() {
 
-    const prediction = await model.predict(webcam.canvas);
+    const prediction = await model.predict(
+        webcam.canvas
+    );
 
     let bestPrediction = prediction[0];
 
@@ -70,6 +75,7 @@ async function predict() {
             prediction[i].probability >
             bestPrediction.probability
         ) {
+
             bestPrediction = prediction[i];
         }
     }
@@ -89,7 +95,7 @@ async function predict() {
     /* No Distraction */
     if (
         className.includes("no") ||
-        className.includes("focused")
+        className.includes("focus")
     ) {
 
         low = probability;
@@ -100,7 +106,7 @@ async function predict() {
         document.getElementById(
             "aiInsight"
         ).innerText =
-            "Students appear attentive and engaged. The learning environment seems productive.";
+            "The student appears attentive and focused.";
 
     }
 
@@ -117,7 +123,7 @@ async function predict() {
         document.getElementById(
             "aiInsight"
         ).innerText =
-            "Minor distraction patterns detected. Interactive teaching strategies may improve focus.";
+            "Minor distractions detected. Classroom engagement may improve focus.";
 
     }
 
@@ -132,10 +138,10 @@ async function predict() {
         document.getElementById(
             "aiInsight"
         ).innerText =
-            "Significant distraction indicators observed. Additional classroom engagement methods may be beneficial.";
+            "High distraction detected. Additional attention may be required.";
     }
 
-    /* Update percentages */
+    /* Update dashboard */
     document.getElementById(
         "lowVal"
     ).innerText = low + "%";
@@ -175,7 +181,7 @@ function testModelURL() {
             } else {
 
                 setStatus(
-                    "Model connection failed ✖"
+                    "Unable to connect to the model ✖"
                 );
             }
         })
@@ -183,7 +189,7 @@ function testModelURL() {
         .catch(() => {
 
             setStatus(
-                "Unable to reach the model ✖"
+                "Model connection failed ✖"
             );
         });
 }

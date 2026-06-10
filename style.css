@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -21,7 +22,7 @@ body {
         linear-gradient(120deg, #e0f2fe, #0f766e);
 }
 
-/* Background Glow */
+/* Background glow */
 .bg {
     position: fixed;
     inset: -60px;
@@ -40,9 +41,9 @@ body {
     opacity: 0.85;
 }
 
-/* Container */
+/* Main container */
 .container {
-    width: min(1100px, 95%);
+    width: min(1000px, 95%);
     padding: 30px;
     border-radius: 28px;
 
@@ -60,7 +61,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 700;
     color: #0f766e;
 }
@@ -68,13 +69,14 @@ header h1 {
 header p {
     color: #475569;
     margin-top: 10px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-/* Information Cards */
+/* Information cards */
 .info-card {
     margin-bottom: 25px;
-    padding: 25px;
+    padding: 22px;
+
     border-radius: 22px;
 
     background: rgba(255, 255, 255, 0.55);
@@ -84,66 +86,12 @@ header p {
 
 .info-card h2 {
     color: #0f766e;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .info-card p {
     color: #334155;
-    line-height: 1.8;
-    margin-bottom: 12px;
-}
-
-.objective-list {
-    padding-left: 20px;
-}
-
-.objective-list li {
-    margin-bottom: 12px;
-    color: #334155;
     line-height: 1.7;
-}
-
-/* Steps */
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 18px;
-}
-
-.step {
-    padding: 20px;
-    text-align: center;
-
-    border-radius: 18px;
-
-    background: rgba(240, 249, 255, 0.70);
-}
-
-.step-number {
-    width: 45px;
-    height: 45px;
-
-    margin: 0 auto 15px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: white;
-    font-weight: 700;
-
-    background: #0f766e;
-}
-
-.step h3 {
-    color: #0f766e;
-    margin-bottom: 10px;
-}
-
-.step p {
-    margin: 0;
 }
 
 /* Buttons */
@@ -156,7 +104,7 @@ header p {
 }
 
 button {
-    padding: 12px 18px;
+    padding: 12px 16px;
 
     border: none;
     border-radius: 14px;
@@ -164,21 +112,34 @@ button {
     cursor: pointer;
 
     font-weight: 600;
+
     transition: 0.2s;
 
     color: white;
 }
 
 button:nth-child(1) {
-    background: linear-gradient(135deg, #14b8a6, #0f766e);
+    background: linear-gradient(
+        135deg,
+        #14b8a6,
+        #0f766e
+    );
 }
 
 button:nth-child(2) {
-    background: linear-gradient(135deg, #60a5fa, #38bdf8);
+    background: linear-gradient(
+        135deg,
+        #60a5fa,
+        #38bdf8
+    );
 }
 
 button:nth-child(3) {
-    background: linear-gradient(135deg, #34d399, #a7f3d0);
+    background: linear-gradient(
+        135deg,
+        #34d399,
+        #a7f3d0
+    );
 
     color: #064e3b;
 }
@@ -192,12 +153,14 @@ button:hover {
     margin-bottom: 20px;
 
     font-weight: 600;
+
     color: #334155;
 }
 
-/* Main Grid */
+/* Main grid */
 .grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 20px;
@@ -205,7 +168,7 @@ button:hover {
     margin-bottom: 25px;
 }
 
-/* Camera */
+/* Camera section */
 .camera {
     display: flex;
     justify-content: center;
@@ -241,10 +204,10 @@ button:hover {
 .panel h2 {
     color: #0f766e;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-/* Label Boxes */
+/* Label boxes */
 .label-box {
     display: flex;
     justify-content: space-between;
@@ -259,7 +222,7 @@ button:hover {
     font-weight: 700;
 }
 
-/* Low */
+/* No Distraction */
 .low {
     background: rgba(34, 197, 94, 0.18);
 
@@ -268,7 +231,7 @@ button:hover {
     border: 1px solid rgba(34, 197, 94, 0.35);
 }
 
-/* Medium */
+/* Medium Distraction */
 .medium {
     background: rgba(251, 146, 60, 0.22);
 
@@ -277,7 +240,7 @@ button:hover {
     border: 1px solid rgba(251, 146, 60, 0.35);
 }
 
-/* High */
+/* High Distraction */
 .high {
     background: rgba(239, 68, 68, 0.22);
 
@@ -286,12 +249,68 @@ button:hover {
     border: 1px solid rgba(239, 68, 68, 0.35);
 }
 
-/* Tech Stack */
+/* How it works */
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
+
+    gap: 15px;
+}
+
+.step {
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background: rgba(
+        240,
+        249,
+        255,
+        0.70
+    );
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: #0f766e;
+}
+
+.step h3 {
+    color: #0f766e;
+
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 0.95rem;
+}
+
+/* Technology stack */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 10px;
 }
 
 .tech-stack span {
@@ -303,26 +322,26 @@ button:hover {
 
     color: #0f766e;
 
-    background: rgba(15, 118, 110, 0.12);
-}
-
-/* Disclaimer */
-.disclaimer {
-    border-left: 5px solid #14b8a6;
+    background: rgba(
+        15,
+        118,
+        110,
+        0.12
+    );
 }
 
 /* Footer */
 footer {
-    margin-top: 25px;
+    margin-top: 20px;
 
     text-align: center;
 
     color: #334155;
 
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Responsive design */
 @media (max-width: 850px) {
 
     .grid {
@@ -332,16 +351,16 @@ footer {
     header h1 {
         font-size: 2rem;
     }
-
-    .container {
-        padding: 20px;
-    }
 }
 
 @media (max-width: 550px) {
 
     body {
         padding: 15px 0;
+    }
+
+    .container {
+        padding: 20px;
     }
 
     .buttons {
@@ -354,11 +373,5 @@ footer {
 
     header h1 {
         font-size: 1.8rem;
-    }
-
-    .info-card,
-    .panel,
-    .camera {
-        padding: 18px;
     }
 }
